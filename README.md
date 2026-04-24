@@ -1,181 +1,155 @@
-Project Overview:
+AI Job Market Analysis: Impact of AI on Employment, Salaries, and Workforce Trends
+Project Overview
 
-This project provides a comprehensive analysis of Artificial Intelligence's transformative impact on the global job market. Through advanced data analytics and visualization, we explore how AI is reshaping employment patterns, salary structures, automation risks, and workforce composition across industries.
+This project analyzes the impact of Artificial Intelligence (AI) on job markets across industries. The goal is to understand how AI influences job growth, salary patterns, automation risk, and workforce structure, and to derive actionable insights for data-driven decision-making.
 
-Goal: Deliver actionable insights to help organizations and professionals navigate the AI-driven employment landscape.
+The project follows a structured data pipeline, including data extraction, cleaning, exploratory data analysis (EDA), statistical analysis, and final data preparation for dashboard visualization.
 
-Problem Statement
-"The rapid adoption of AI technology is fundamentally transforming work. Organizations and professionals face critical challenges:"
-
-1.Identifying high-growth roles in an AI-driven economy
-2.Understanding salary drivers for AI-influenced positions
-3.Managing automation risk across job categories
-4.Designing workforce strategies aligned with future demand
-5.Optimizing talent acquisition in competitive markets
-This project addresses these challenges through data-driven analysis of 30,000+ job records.
-
-📁 Dataset Description
-Attribute	Details
-Source	AI Job Trends Dataset (2024)
-Size	~30,000 rows × 13 columns
-Type	Tabular, job-level records
-Time Horizon	2024–2030 projections
-Key Features:
- Job Title - Specific role designation
- Industry - Sector classification
- Job Openings - Current (2024) and projected (2030)
- Median Salary - Annual compensation (USD)
- AI Impact Level - Low/Medium/High
- Automation Risk - Percentage likelihood
- Required Education - Minimum qualification
- Required Experience - Years needed
- Remote Work Ratio - Percentage
- 
-🗂️ Project Structure
-AI_Job_Trends_Analysis/
+Objectives
+Identify high-growth industries and job roles influenced by AI
+Analyze salary patterns across industries and experience levels
+Evaluate automation risk and its impact on job stability
+Understand workforce trends including education, experience, and remote work
+Prepare structured datasets for interactive dashboard visualization
+Dataset Description
+Dataset: AI Job Trends Dataset
+Records: ~30,000 job entries
+Format: Structured tabular data
+Key Features
+Job Title
+Industry
+Job Openings (2024, 2030)
+Median Salary (USD)
+AI Impact Level
+Automation Risk (%)
+Required Education
+Required Experience (Years)
+Remote Work Ratio (%)
+Project Structure
+SectionC_Group2_AI-Job-Market-Analysis/
 │
-├── 📄 README.md                          # Project documentation
-├── 📋 requirements.txt                   # Python dependencies
+├── README.md
 │
-├── 📂 data/
+├── data/
 │   ├── raw/
-│   │   └── ai_job_trends_dataset.csv    # Original dataset
+│   │   └── ai_job_trends_dataset.csv
 │   └── processed/
-│       └── cleaned_jobs.csv             # Cleaned data
+│       ├── cleaned_jobs.csv
+│       ├── kpi_data.csv
+│       ├── industry_summary.csv
+│       ├── job_summary.csv
+│       ├── salary_summary.csv
+│       ├── risk_summary.csv
+│       ├── workforce_summary.csv
+│       ├── remote_summary.csv
+│       └── final_dashboard_data.csv
 │
-├── 📓 notebooks/
-│   ├── 01_extraction.ipynb              # Data loading
-│   ├── 02_cleaning.ipynb                # Data preprocessing
-│   ├── 03_eda.ipynb                     # Exploratory analysis
-│   ├── 04_statistical_analysis.ipynb    # Hypothesis testing
-│   └── 05_final_load_prep.ipynb         # Dashboard preparation
+├── notebooks/
+│   ├── 01_extraction.ipynb
+│   ├── 02_cleaning.ipynb
+│   ├── 03_eda.ipynb
+│   ├── 04_statistical_analysis.ipynb
+│   └── 05_final_load_prep.ipynb
 │
-├── 🐍 scripts/
-│   ├── etl_pipeline.py                  # Automated ETL
-│   └── utils.py                         # Helper functions
+├── tableau/
+│   ├── screenshots/
+│   └── dashboard_links.md
 │
-├── 📊 tableau/
-│   ├── screenshots/                     # Dashboard images
-│   └── dashboard_links.md               # Live dashboard URLs
+├── reports/
+│   ├── project_report.pdf
+│   └── presentation.pdf
 │
-├── 📑 reports/
-│   ├── project_report.pdf               # Detailed findings
-│   └── presentation.pptx                # Executive summary
-│
-└── 📚 docs/
-    ├── data_dictionary.md               # Feature descriptions
-    └── methodology.md                   # Analysis approach
+└── docs/
+    └── data_dictionary.md
+Methodology
+1. Data Extraction
+Dataset loaded using Python (Pandas)
+Initial inspection of structure, data types, and missing values
+2. Data Cleaning and Transformation
+Standardization of column names
+Handling missing values
+Data type corrections
+Feature engineering:
+Growth Rate
+Risk Categories (Low, Medium, High)
+Growth Categories
+3. Exploratory Data Analysis (EDA)
 
+EDA is structured into four business-focused sections:
 
-METHODOLOGY:
-1️⃣ Data Extraction
- Dataset loaded using Pandas
- Initial schema inspection
- Data quality assessment
- 
-2️⃣ Data Cleaning & Transformation
- Standardized column naming conventions
- Handled missing values (imputation/removal)
- Corrected data types
- Outlier detection using IQR method
- Feature Engineering:
-Growth Rate = (Openings_2030 - Openings_2024) / Openings_2024
-Automation Risk Categories (Low/Medium/High)
-Salary Bins
-
-3️⃣ Exploratory Data Analysis (EDA)
- Job Growth & Demand
-Growth rate distribution across industries
-Top 10 fastest-growing roles
-Declining job categories
-AI impact vs. job growth correlation
- Salary Analysis
-Salary distribution and outliers
-Industry-wise compensation comparison
-Experience and education impact
-AI impact level vs. salary relationship
- Automation Risk
-Risk distribution patterns
-High-risk vs. low-risk job characteristics
-Automation risk vs. job growth
-Risk segmentation analysis
- Workforce Structure
-Education level distribution
-Experience requirements trends
-Remote work adoption rates
-Remote work impact on compensation
-
-4️⃣ Statistical Analysis  
- Correlation matrix analysis
- Hypothesis testing (t-tests, ANOVA)
- Regression modeling:
+Job Growth & Demand
+Growth rate distribution
+Industry-wise growth comparison
+Identification of top growing and declining jobs
+AI impact vs growth
+Salary Analysis
+Salary distribution
+Salary variation across industries
+Experience vs salary
+AI impact vs salary
+Automation Risk
+Risk distribution
+Risk vs job status
+Risk vs growth
+Risk segmentation
+Workforce Structure
+Education distribution
+Experience trends
+Remote work analysis
+Remote vs salary and growth
+4. Statistical Analysis
+Correlation analysis between key variables
+Hypothesis testing:
+AI impact vs salary
+AI impact vs growth
+Automation risk vs job decline
+Education vs salary
+Regression models:
 Salary prediction model
-Job growth drivers
-Feature importance ranking
+Growth rate prediction model
+5. Final Data Preparation (Final Load Prep)
+Column standardization
+Feature engineering
+KPI creation
+Aggregated datasets for dashboards:
+Industry summary
+Job summary
+Salary summary
+Risk summary
+Workforce summary
+Remote work summary
+Export of Tableau-ready CSV files
+Dashboards (Tableau)
 
-5️⃣ Dashboard Development 
-Planned Tableau Dashboards:
+The project includes four dashboards:
 
- Job Growth & Future Demand
+Job Growth & Future Demand
+Salary Drivers & AI Impact
+Automation Risk & Job Vulnerability
+Workforce Trends & Hiring Strategy
 
-Industry growth trends
-Top emerging roles
-Demand forecasting
- Salary Intelligence
+Each dashboard is aligned with business questions derived from EDA and validated through statistical analysis.
 
-Salary benchmarking tool
-AI impact on compensation
-Experience-salary curves
- Automation Risk Monitor
-
-Risk heatmap by industry
-Job security scorecard
-Reskilling priorities
- Workforce Trends
-
-Remote work analytics
-Education requirements shift
-Hiring strategy optimizer
- Key Insights
- Preliminary Findings
-Finding	Insight
-🚀 AI-Driven Growth	Roles with high AI impact show 3.2x higher growth rates
-💰 Salary Premium	High AI-impact positions command 40% higher median salaries
-⚠️ Automation Risk	Jobs with >70% automation risk show negative growth
-🎯 Experience Sweet Spot	Mid-level (3-7 years) roles dominate 65% of job demand
-🏠 Remote Work Trend	Remote-friendly roles offer 15% competitive salary advantage
-🎓 Education Shift	Master's degree requirement growing 2x faster than Bachelor's
-📌 These insights are preliminary and subject to refinement through ongoing statistical validation.
-
-🛠️ Tools & Technologies
-Category	Tools
-Programming	Python
-Data Analysis	Pandas, NumPy, SciPy
-Visualization	Matplotlib, Seaborn, Plotly
-BI Tools	Tableau Public
-Development	Jupyter Notebook, Google Colab
-Version Control	Git, GitHub
-🚀 Getting Started
-Prerequisites
-Bash
-
-Python 3.8+
-pip or conda package manager
-Installation
+Key Insights
+AI-driven roles show significantly higher growth rates
+High AI impact roles command higher salaries
+Jobs with high automation risk are more likely to decline
+Mid-level experience roles dominate job demand
+Remote work is increasingly associated with competitive salaries
+Tools and Technologies
+Python (Pandas, NumPy, Matplotlib, Seaborn)
+Jupyter Notebook / Google Colab
+Tableau Public
+Git and GitHub
+How to Run
 Clone the repository
-Bash
-
-git clone https://github.com/yourusername/AI-Job-Trends-Analysis.git
-cd AI-Job-Trends-Analysis
-Install dependencies
-Bash
-
-pip install -r requirements.txt
-Run Jupyter notebooks
-Bash
-
-jupyter notebook
-Execute ETL pipeline
-Bash
-
-python scripts/etl_pipeline.py
+Open notebooks in Jupyter or Google Colab
+Run notebooks in order:
+01 → 02 → 03 → 04 → 05
+Use generated CSV files in Tableau
+Current Status
+Data extraction and cleaning: Completed
+Exploratory data analysis: Completed
+Statistical analysis: Completed
+Final data preparation: Completed
+Dashboard development: In progress
