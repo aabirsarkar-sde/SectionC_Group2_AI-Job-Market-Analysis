@@ -137,10 +137,3 @@ Each dashboard is aligned with business questions derived from EDA and supported
    `01_extraction.ipynb` -> `02_cleaning.ipynb` -> `03_eda.ipynb` -> `04_statistical_analysis.ipynb` -> `05_final_load_prep.ipynb`
 4. Use the generated CSV files for Tableau dashboard creation.
 
-## Current Status
-
-- Data extraction and cleaning: Completed
-- Exploratory data analysis: Completed
-- Statistical analysis: Completed
-- Final data preparation: Completed
-- Dashboard development: In progress
