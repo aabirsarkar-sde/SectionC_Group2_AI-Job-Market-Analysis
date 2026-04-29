@@ -8,3 +8,4 @@
 | Aparna Singh | 2401020089 | [GitHub](https://github.com/TinkerTechie) | [Resume](https://drive.google.com/file/d/1zTK3v_VYsOTPfZNRHntWsHWY1_iaM7yh/view?usp=sharing) |
 | Polana Rakshita | 2401020044 | [View Portfolio](https://polana-rakshita.netlify.app/) | [Resume](https://drive.google.com/file/d/1cJRSJFEGn-n8ZevrrB9_8vq-A4zwcSeH/view?usp=sharing) |
 | Ayush Kumar | 2401020016 | [View Portfolio](https://dva-portfolio-chi-five.vercel.app/) | [Resume](https://docs.google.com/document/d/1_xloTx_awr5T2vztfX1fm0ICB8knWw5O3i61iecTBws/edit?usp=sharing) |
+| Aabir Sarkar | 2401010001 | [View Portfolio](https://dva-portfolio-aabir.vercel.app/) | [Resume](https://drive.google.com/drive/folders/1M19MwyViz78AKG4kJ86OobJqeyUbab2H?usp=sharing) |
